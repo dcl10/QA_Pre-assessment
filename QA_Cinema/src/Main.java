@@ -30,7 +30,7 @@ public class Main {
                 + "Standard: s; OAP: o; Child: c; Student: u");
             String choice = scanner.nextLine().toLowerCase();
             switch (choice) {
-                case "s" : ticketList.add(new StandardTicket()); break;
+                case "s" : ticketList.add(new Ticket()); break;
                 case "o" : ticketList.add(new OAPTicket()); break;
                 case "c" : ticketList.add(new ChildTicket()); break;
                 case "u" : ticketList.add(new StudentTicket()); break;

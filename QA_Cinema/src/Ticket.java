@@ -6,11 +6,9 @@ public class Ticket {
         return price;
     }
 
-    void setPrice(int price) {
-        this.price = price;
+    public Ticket() {
+        this.price = 8;
     }
-
-    public Ticket() {}
 
     public Ticket(int price) {
         this.price = price;
