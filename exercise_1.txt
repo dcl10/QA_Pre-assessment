@@ -1,0 +1,31 @@
+Encapsulation:
+
+The method of hiding class variables such that they can only be altered or otherwise acted upon by the class methods.
+In Java this is done by setting the variable permisssion to 'private' and interacting with these private variables using public methods (class methods with 'public' in the method header)
+
+Inheritance:
+
+This is when a class can use the code (methods and variables) of another class, without instantiating an object of that class. In Java this is done by adding 'extends ClassName' to the class header. This makes the class a sub-class of the class it 'extends'. 
+
+Polymorphism:
+
+Polymorphism can take the form of methods with the same name, but with different return types and parameters.
+e.g.
+	public int add(int x, int y) { return x + y; }
+	
+	public String add(String x, String y) { return x.concat(y); }
+
+It can also be where you overwrite the functionality of method inherited from a superclass,
+e.g.
+	public class Food {
+		void eat() { System.out.println("This FOOD is great"); }
+	}
+
+	public class Chicken extends Food {
+		@Override
+		void eat() { System.out.println("This CHICKEN is great"); }
+	}
+
+Abstraction:
+
+This is the process of hiding the complexity of a class such that a user does not need to know the intricacies of how it works in order use it.
