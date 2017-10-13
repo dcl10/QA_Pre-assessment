@@ -1,4 +1,4 @@
-public class Ticket {
+public abstract class Ticket {
 
     private int price;
 
