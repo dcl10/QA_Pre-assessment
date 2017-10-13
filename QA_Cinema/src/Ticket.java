@@ -6,10 +6,6 @@ public abstract class Ticket {
         return price;
     }
 
-    public Ticket() {
-        this.price = 8;
-    }
-
     public Ticket(int price) {
         this.price = price;
     }
