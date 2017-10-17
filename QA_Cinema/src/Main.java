@@ -43,7 +43,7 @@ public class Main {
 
         int sum = 0;
         for (Ticket t : ticketList) sum += t.getPrice();
-        if (today.toString().matches("Wed")) sum -= 2*ticketList.size();
+        if (today.toString().contains("Wed")) sum -= 2*ticketList.size();
         System.out.println("Your total is: £" + sum);
     }
 }
