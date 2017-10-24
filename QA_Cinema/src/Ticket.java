@@ -6,7 +6,7 @@ public abstract class Ticket {
         return price;
     }
 
-    public Ticket(int price) {
+    Ticket(int price) {
         this.price = price;
     }
 }

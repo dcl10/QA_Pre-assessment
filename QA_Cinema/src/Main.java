@@ -27,13 +27,14 @@ public class Main {
         */
         while (addTickets) {
             System.out.println("Select which ticket you wish to purchase." + System.lineSeparator()
-                + "Standard: s; OAP: o; Child: c; Student: u");
+                + "Standard: s; OAP: o; Child: c; Student: u; Cancel: cancel");
             String choice = scanner.nextLine().toLowerCase();
             switch (choice) {
                 case "s" : ticketList.add(new StandardTicket()); break;
                 case "o" : ticketList.add(new OAPTicket()); break;
                 case "c" : ticketList.add(new ChildTicket()); break;
                 case "u" : ticketList.add(new StudentTicket()); break;
+                case "cancel" : break;
                 default: System.out.println("Invalid option selected."); break;
             }
             System.out.println("Have you finished ordering? (Y/N)");
@@ -41,9 +42,9 @@ public class Main {
             if (choice.equals("Y")) addTickets = false;
         }
 
-        int sum = 0;
+        double sum = 0;
         for (Ticket t : ticketList) sum += t.getPrice();
         if (today.toString().contains("Wed")) sum -= 2*ticketList.size();
-        System.out.println("Your total is: £" + sum);
+        System.out.printf("Your total is: £%.2f" , sum);
     }
 }
